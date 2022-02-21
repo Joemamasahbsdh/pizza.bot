@@ -31,6 +31,7 @@ def pickup():
             if delivery >= 1 and delivery <= 2: 
                 if delivery == 1:
                     print ("Delivery")
+                    break
 
                 elif delivery == 2:
                     print ("Pickup")
