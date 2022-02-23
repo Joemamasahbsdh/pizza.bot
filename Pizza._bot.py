@@ -27,7 +27,7 @@ def pickup():
     print ("For pickup please enter 2.")
     while True: 
         try:
-            delivery = int(input ("PLease enter number ") )
+            delivery = int(input ("Please enter number ") )
             if delivery >= 1 and delivery <= 2: 
                 if delivery == 1:
                     print ("Delivery")
