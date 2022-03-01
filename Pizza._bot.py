@@ -4,8 +4,20 @@ from random import randint
 
 # list of random names
 names  = ["Louis", "Gian", "Mikara", "Joaquin", "Tomboy", "BigBen", "Calicdan", "Barlo", "Yacob", "Marcas"]
+#customer details dictionary
+customer_details ={}
 
-# welcome message with randome name
+#validates inputs to check if they are blank 
+def not_blank(question):
+    valid = False 
+    while not valid: 
+        response = input(question)
+        if response != "": 
+            return response.title()
+        else:
+            print("This cannot be blank")
+
+
 def welcome():
     '''
 Purpose: To generate a random name from the list and print out 
@@ -20,21 +32,20 @@ Returns: None
     print("***I am here to take your order***")
 
 # Menu for pickup or deliver
-
-def pickup():
+def order_type():
     print ("Is your order for pickup or delivery?")
-    print ("For delivery please enter 1.")
-    print ("For pickup please enter 2.")
+    print ("For pickup please enter 1.")
+    print ("For delivery please enter 2.")
     while True: 
         try:
             delivery = int(input ("Please enter number ") )
             if delivery >= 1 and delivery <= 2: 
                 if delivery == 1:
-                    print ("Delivery")
-                    break
-
-                elif delivery == 2:
                     print ("Pickup")
+                    pickup()
+                    break
+                elif delivery == 2:
+                    print ("Delivery")
                     break
                 else:
                     print("number must be 1 or 2.")
@@ -44,7 +55,15 @@ def pickup():
 
 
 # Pick up information - name and phone number
-
+def pickup():
+    question = ("Please enter your name")
+    customer_details ['name'] = not_blank(question) 
+    #print(customer_details ['name'])
+   
+    question = ("Please enter your number")
+    customer_details ['phone'] = not_blank(question) 
+    #print(customer_details ['phone'])
+    print(customer_details)
 
 
 
@@ -104,6 +123,7 @@ def main():
         Returns: None 
          '''
          welcome()
-         pickup()
+         order_type()
+         
 
 main()
