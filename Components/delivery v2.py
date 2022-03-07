@@ -10,7 +10,7 @@ def not_blank(question):
         else:
             print("This cannot be blank")
 
-def pickup():
+def delivery():
     question = ("Please enter your name")
     customer_details ['name'] = not_blank(question) 
     #print(customer_details ['name'])
@@ -32,4 +32,4 @@ def pickup():
     print(customer_details ['suburb'])
     print(customer_details)
 
-pickup()
+delivery()
