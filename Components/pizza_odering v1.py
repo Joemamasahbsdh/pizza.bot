@@ -19,7 +19,13 @@ menu()
 # ask for total number of pizzas required 
 num_pizzas = 0 
 
-num_pizzas = int(input("How many pizzas would you like to order?"))
+while True:
+    num_pizzas = int(input("How many pizzas would you like to order?"))
+    if num_pizzas >= 1 and num_pizzas <= 5:
+        break
+    else:
+        print("Your order must be between 1 and 5")
+
 
 print(num_pizzas)
 
@@ -30,6 +36,7 @@ for item in range (num_pizzas):
         pizza_ordered = int(input())
         order_list.append(pizza_names[pizza_ordered])
         order_cost.append(pizza_prices[pizza_ordered])
+        print("{} ${:.2f}" .format(pizza_names[pizza_ordered],pizza_prices[pizza_ordered]))
         num_pizzas = num_pizzas -1 
 
 print(order_list)
