@@ -17,8 +17,8 @@ menu()
 
 
 
-def pizza_order():
-    # ask for total number of pizzas required 
+def order_pizza():
+# ask for total number of pizzas required 
     num_pizzas = 0 
 
     while True:
@@ -54,4 +54,4 @@ def pizza_order():
             num_pizzas = num_pizzas -1 
 
 menu()
-pizza_order()
+order_pizza()
