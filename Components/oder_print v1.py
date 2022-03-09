@@ -1,7 +1,5 @@
 # list to store ordered pizzas
 order_list = ['Margherita', 'Pepperoni', 'Hawaiian','BBQ Chicken Deluxe']
-# list to store pizza costs
-order_cost = [8.50, 8.50, 8.50, 13.50]
 
 
 count = 0 

@@ -20,7 +20,6 @@ menu()
 def order_pizza():
 # ask for total number of pizzas required 
     num_pizzas = 0 
-
     while True:
         try:
             num_pizzas = int(input("How many pizzas would you like to order?"))
@@ -31,9 +30,6 @@ def order_pizza():
         except ValueError:
             print("That is not a valid number")
             print("Number must be between 1 and 5")
-
-
-
     #Choose pizza from menu
     for item in range (num_pizzas):
         while num_pizzas > 0: 

@@ -20,7 +20,6 @@ menu()
 def pizza_order():
     # ask for total number of pizzas required 
     num_pizzas = 0 
-
     while True:
         try:
             num_pizzas = int(input("How many pizzas would you like to order?"))
@@ -53,5 +52,4 @@ def pizza_order():
             print("{} ${:.2f}" .format(pizza_names[pizza_ordered],pizza_prices[pizza_ordered]))
             num_pizzas = num_pizzas -1 
 
-menu()
-pizza_order()
+
